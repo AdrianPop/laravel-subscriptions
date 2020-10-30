@@ -13,6 +13,7 @@ use Rinvex\Subscriptions\Models\PlanSubscriptionUsage;
 use Rinvex\Subscriptions\Console\Commands\MigrateCommand;
 use Rinvex\Subscriptions\Console\Commands\PublishCommand;
 use Rinvex\Subscriptions\Console\Commands\RollbackCommand;
+use Illuminate\Support\Facades\Validator;
 
 class SubscriptionsServiceProvider extends ServiceProvider
 {
@@ -62,6 +63,16 @@ class SubscriptionsServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        // Add strip_tags validation rule
+        Validator::extend('strip_tags', function ($attribute, $value) {
+            return strip_tags($value) === $value;
+        }, 'validation.invalid_strip_tags');
+
+        // Add time offset validation rule
+        Validator::extend('timeoffset', function ($attribute, $value) {
+            return array_key_exists($value, timeoffsets());
+        }, 'validation.invalid_timeoffset');
+
         // Publish Resources
         $this->publishesConfig('rinvex/laravel-subscriptions');
         $this->publishesMigrations('rinvex/laravel-subscriptions');
