@@ -55,8 +55,12 @@
       "database"
     ],
     "psr-4": {
-      "Rinvex\\Subscriptions\\": "src"
-    }
+      "Rinvex\\Subscriptions\\": "src",
+      "Rinvex\\Support\\": "src"
+    },
+    "files": [
+      "support/helpers.php"
+    ]
   },
   "autoload-dev": {
     "psr-4": {

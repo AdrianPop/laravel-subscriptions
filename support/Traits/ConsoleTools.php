@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Rinvex\Subscriptions\Traits;
+namespace Rinvex\Support\Traits;
 
 trait ConsoleTools
 {
