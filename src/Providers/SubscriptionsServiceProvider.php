@@ -6,7 +6,7 @@ namespace Rinvex\Subscriptions\Providers;
 
 use Rinvex\Subscriptions\Models\Plan;
 use Illuminate\Support\ServiceProvider;
-use Rinvex\Support\Traits\ConsoleTools;
+use Rinvex\Subscriptions\Traits\ConsoleTools;
 use Rinvex\Subscriptions\Models\PlanFeature;
 use Rinvex\Subscriptions\Models\PlanSubscription;
 use Rinvex\Subscriptions\Models\PlanSubscriptionUsage;
