@@ -56,7 +56,7 @@
     ],
     "psr-4": {
       "Rinvex\\Subscriptions\\": "src",
-      "Rinvex\\Support\\": "src"
+      "Rinvex\\Support\\": "support"
     },
     "files": [
       "support/helpers.php"
