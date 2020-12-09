@@ -74,8 +74,8 @@ class SubscriptionsServiceProvider extends ServiceProvider
         }, 'validation.invalid_timeoffset');
 
         // Publish Resources
-        $this->publishesConfig('binarcode/laravel-subscriptions');
-        $this->publishesMigrations('binarcode/laravel-subscriptions');
-        ! $this->autoloadMigrations('binarcode/laravel-subscriptions') || $this->loadMigrationsFrom(__DIR__.'/../../database/migrations');
+        $this->publishesConfig('binarcode/rinvex-laravel-subscriptions');
+        $this->publishesMigrations('binarcode/rinvex-laravel-subscriptions');
+        ! $this->autoloadMigrations('binarcode/rinvex-laravel-subscriptions') || $this->loadMigrationsFrom(__DIR__.'/../../database/migrations');
     }
 }
